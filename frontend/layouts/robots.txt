@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /login/
+Disallow: /da/login/
+Disallow: /logout
+Disallow: /checkout/
+Disallow: /da/checkout/
+Disallow: /dashboard
+Disallow: /request-reset
+Disallow: /reset-password
+
+Sitemap: {{ "sitemap.xml" | absURL }}

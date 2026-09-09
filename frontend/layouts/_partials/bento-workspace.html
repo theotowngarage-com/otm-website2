@@ -86,13 +86,13 @@
       {{ $heroImg := resources.Get "images/bento/weld.png" }}
       {{ $hero := $heroImg.Resize "800x webp q85" }}
       <div class="relative h-72 overflow-hidden rounded-[10px]">
-        <img src="{{ $hero.RelPermalink }}" alt="" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover">
+        <img src="{{ $hero.RelPermalink }}" alt="{{ i18n "hero_image_alt" }}" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-5">
-          <h1 class="font-secondary font-bold leading-tight">
+          <p class="font-secondary font-bold leading-tight">
             <span class="block text-2xl text-white">{{ i18n "your_very_own" }}</span>
             <span class="block text-3xl text-accent">{{ i18n "makerspace" }}</span>
-          </h1>
+          </p>
           <p class="mt-2 text-sm leading-snug text-white/80">{{ i18n "hero_subline" }}</p>
         </div>
       </div>
@@ -111,7 +111,7 @@
         {{ $img := resources.Get .img }}
         {{ $tile := $img.Resize "480x webp q85" }}
         <a href="{{ .url | relLangURL }}" class="relative h-36 overflow-hidden rounded-[10px] transition-transform duration-150 active:scale-[0.98]">
-          <img src="{{ $tile.RelPermalink }}" alt="" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
+          <img src="{{ $tile.RelPermalink }}" alt="{{ i18n .label }}" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
           <p class="absolute bottom-3 left-3 right-3 font-secondary text-base font-bold text-white inline-flex items-center gap-2">{{ i18n .label }}<i class="fa-solid fa-arrow-right text-xs"></i></p>
         </a>

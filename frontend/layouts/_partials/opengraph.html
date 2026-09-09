@@ -4,11 +4,7 @@
   {{- $title = .Site.Title -}}
 {{- end -}}
 
-{{- /* Resolve description */ -}}
-{{- $description := .Site.Params.description -}}
-{{- with .Description -}}
-  {{- $description = . -}}
-{{- end -}}
+{{- $description := partial "func/page-description" . -}}
 
 {{- /* Resolve OG type */ -}}
 {{- $ogType := "website" -}}
@@ -73,7 +69,7 @@
 <meta property="og:description" content="{{ $description }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:locale" content="{{ .Site.Language.Lang }}" />
+<meta property="og:locale" content="{{ index (dict "en" "en_GB" "da" "da_DK") .Site.Language.Lang }}" />
 <meta property="og:type" content="{{ $ogType }}" />
 {{- if $imageURL }}
 <meta property="og:image" content="{{ $imageURL }}" />

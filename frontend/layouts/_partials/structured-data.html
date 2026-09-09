@@ -1,0 +1,32 @@
+{{- if .IsHome -}}
+{{- $address := .Site.Params.address -}}
+{{- $geo := .Site.Params.geo -}}
+{{- $social := .Site.Params.social -}}
+{{- $organization := dict
+  "@type" "LocalBusiness"
+  "@id" (printf "%s#organization" .Site.BaseURL)
+  "name" .Site.Params.siteName
+  "url" .Site.BaseURL
+  "logo" (.Site.Params.ogImage | absURL)
+  "image" (.Site.Params.ogImage | absURL)
+  "description" .Site.Params.description
+  "email" .Site.Params.email.contact
+  "address" (dict
+    "@type" "PostalAddress"
+    "streetAddress" $address.street
+    "postalCode" $address.postal_code
+    "addressLocality" $address.locality
+    "addressCountry" $address.country)
+  "geo" (dict "@type" "GeoCoordinates" "latitude" $geo.latitude "longitude" $geo.longitude)
+  "sameAs" (slice $social.facebook $social.instagram $social.discord)
+-}}
+{{- $website := dict
+  "@type" "WebSite"
+  "@id" (printf "%s#website" .Site.BaseURL)
+  "name" .Site.Params.siteName
+  "url" .Site.BaseURL
+  "inLanguage" (slice "en" "da")
+  "publisher" (dict "@id" (printf "%s#organization" .Site.BaseURL))
+-}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $organization $website) | jsonify | safeJS }}</script>
+{{- end -}}

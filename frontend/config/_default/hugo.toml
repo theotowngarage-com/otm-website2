@@ -8,6 +8,8 @@ publishDir = 'public'
 title = "O'Town Makerspace — Community Workshop in Odense"
 theme = 'hugo-up-business-main'
 defaultContentLanguage = 'en'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
 
 # Brand logos are a single source of truth in frontend/branding/logos/ — the
 # Hugo site, the Typst pipeline in marketing-materials/, and the campaign
@@ -32,7 +34,7 @@ defaultContentLanguage = 'en'
 
 [languages]
   [languages.en]
-    languageCode = 'en-us'
+    languageCode = 'en'
     label = 'English'
     weight = 1
     [languages.en.params]
@@ -43,6 +45,7 @@ defaultContentLanguage = 'en'
     languageCode = 'da'
     label = 'Dansk'
     weight = 2
+    title = "O'Town Makerspace — Fællesværksted i Odense"
     [languages.da.params]
       description = "Et fællesskabsdrevet værksted i Odense med 24/7 adgang til 3D-printere, laserskærere, CNC-maskiner, elektronik og træværksted."
       copyright = "© 2026 O'Town Makerspace. Alle rettigheder forbeholdes."
@@ -160,6 +163,14 @@ defaultContentLanguage = 'en'
     # gray_dark = "#0D1A63"
     # tertiary = "#1A2CA3"
 
+  [params.address]
+    street = "Havnegade 57"
+    postal_code = "5000"
+    locality = "Odense C"
+    country = "DK"
+  [params.geo]
+    latitude = 55.3977
+    longitude = 10.3886
   [params.social]
     facebook = "https://www.facebook.com/profile.php?id=61590717692379&sk=mentions"
     instagram = "https://www.instagram.com/otown_makerspace/"

@@ -17,7 +17,8 @@
    NOTE: themes/hugo-up-business-main/assets/css/fonts.css is intentionally
    NOT imported — it contains Hugo template directives ({{ resources.Get … }})
    and can only be processed via Hugo's asset pipeline, not the Tailwind CLI.
-   The brand fonts (Roboto, Space Grotesk) are loaded via Google Fonts in
+   The brand fonts (Roboto, Space Grotesk) are self-hosted woff2 files under
+   static/fonts, declared in static/css/vendor/fonts.css and linked from
    layouts/_default/baseof.html, so this import is unnecessary anyway. */
 @import "./themes/hugo-up-business-main/assets/css/shared/_pagination.css";
 @import "./themes/hugo-up-business-main/assets/css/home/_hero.css";
