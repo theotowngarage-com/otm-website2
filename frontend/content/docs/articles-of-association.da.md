@@ -1,5 +1,6 @@
 ---
 title: "Vedtægter"
+description: "Vedtægter for O'Town Makerspace, den almennyttige værkstedsforening i Odense: formål, medlemskab, bestyrelse og generalforsamling."
 weight: 10
 section: "Legal & Policy"
 section_weight: 4

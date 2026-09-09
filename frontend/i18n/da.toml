@@ -551,3 +551,6 @@ other = "Adgang nægtet"
 
 [error_403_message]
 other = "Du har ikke tilladelse til at se denne side. Hvis du tror det er en fejl, så log ind eller kontakt os."
+
+[hero_image_alt]
+other = "Svejsning i metalværkstedet hos O'Town Makerspace"

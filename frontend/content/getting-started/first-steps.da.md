@@ -1,5 +1,6 @@
 ---
 title: "Første skridt"
+description: "Sådan bliver du medlem af O'Town Makerspace i Odense: besøg et åbent hus, få din introduktion, læs dokumenterne og tilmeld dig online."
 weight: 20
 ---
 Hvis du er ny i makerspacet og gerne vil forstå, hvordan du bliver en del af fællesskabet, er her den enkle vej til at komme i gang:

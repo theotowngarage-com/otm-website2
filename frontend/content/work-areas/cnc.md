@@ -1,5 +1,6 @@
 ---
 title: "CNC Machine"
+description: "Stepcraft 480 CNC machine at O'Town Makerspace in Odense for precision milling, routing and carving of signs, parts and prototypes."
 section: "Work Areas"
 weight: 20
 gallery: "images/workspace/cnc"

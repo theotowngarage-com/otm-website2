@@ -1,5 +1,6 @@
 ---
 title: "Laser Cutting"
+description: "100 W CO₂ laser cutter with a 120 × 80 cm bed at O'Town Makerspace in Odense: cut and engrave wood, acrylic, leather, cardboard and more."
 section: "Work Areas"
 weight: 30
 gallery: "images/workspace/lasercutter"

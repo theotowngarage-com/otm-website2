@@ -1,0 +1,7 @@
+{{- $description := .Site.Params.description -}}
+{{- if .Description -}}
+  {{- $description = .Description -}}
+{{- else if .Summary -}}
+  {{- $description = .Summary | plainify | htmlUnescape | truncate 160 -}}
+{{- end -}}
+{{- return $description -}}

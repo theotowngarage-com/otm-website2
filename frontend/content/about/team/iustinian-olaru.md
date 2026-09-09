@@ -1,5 +1,6 @@
 ---
 title: "Iustinian Olaru"
+description: "Iustinian Olaru, Chairman and Public Relations on the board of O'Town Makerspace, the community workshop in Odense."
 role: "Chairman | Public Relations"
 profile_picture: "images/team/justin.jpg"
 section: "Team"

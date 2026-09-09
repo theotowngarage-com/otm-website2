@@ -26,6 +26,23 @@ services:
       - "traefik.http.routers.otm-members.rule=Host(`members.${SUBDOMAIN:+${SUBDOMAIN}.}${TOPDOMAIN}`)"
       - "traefik.http.routers.otm-members.entrypoints=websecure"
       - "traefik.http.routers.otm-members.tls.certresolver=myresolver"
+      # www.<host> gets its own router and certificate so an ACME failure on
+      # the www name (no DNS record on a preview subdomain) cannot take the
+      # apex certificate down with it. Every www request is a permanent
+      # redirect to the apex, so search engines see one canonical host.
+      - "traefik.http.routers.otm-www.rule=Host(`www.${SUBDOMAIN:+${SUBDOMAIN}.}${TOPDOMAIN}`)"
+      - "traefik.http.routers.otm-www.entrypoints=websecure"
+      - "traefik.http.routers.otm-www.tls.certresolver=myresolver"
+      - "traefik.http.routers.otm-www.middlewares=otm-www-to-apex"
+      - "traefik.http.routers.otm-www.service=otm-app"
+      - "traefik.http.middlewares.otm-www-to-apex.redirectregex.regex=^https?://www\\.(.+)"
+      - "traefik.http.middlewares.otm-www-to-apex.redirectregex.replacement=https://$${1}"
+      - "traefik.http.middlewares.otm-www-to-apex.redirectregex.permanent=true"
+      # The Go file server sends every asset uncompressed; Traefik's compress
+      # middleware gzips/brotlis HTML, CSS, JS and SVG on the way out.
+      - "traefik.http.middlewares.otm-compress.compress=true"
+      - "traefik.http.routers.otm-app.middlewares=otm-compress"
+      - "traefik.http.routers.otm-members.middlewares=otm-compress"
       # Both routers send to the same backend service (single Go binary).
       - "traefik.http.services.otm-app.loadbalancer.server.port=4242"
       - "traefik.http.routers.otm-members.service=otm-app"

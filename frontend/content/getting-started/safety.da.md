@@ -1,5 +1,6 @@
 ---
 title: "Sikkerhedsretningslinjer"
+description: "Sikkerhedsretningslinjer for brug af værktøj og maskiner hos O'Town Makerspace i Odense: værnemidler, maskinregler og hvad du gør i en nødsituation."
 weight: 30
 ---
 

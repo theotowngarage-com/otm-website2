@@ -1,5 +1,6 @@
 ---
 title: "Metalværksted"
+description: "Metalværksted hos O'Town Makerspace i Odense med værktøj til at skære, bore, svejse og finbearbejde metal, for både begyndere og erfarne."
 section: "Work Areas"
 weight: 40
 gallery: "images/workspace/metalworking"

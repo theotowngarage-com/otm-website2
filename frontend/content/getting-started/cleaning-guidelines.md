@@ -1,5 +1,6 @@
 ---
 title: "Cleaning Guidelines"
+description: "Cleaning guidelines for O'Town Makerspace in Odense: leave every workspace better than you found it so tools and machines stay ready for the next maker."
 weight: 40
 ---
 

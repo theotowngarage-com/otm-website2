@@ -1,5 +1,6 @@
 ---
 title: "FAQ"
+description: "Frequently asked questions about O'Town Makerspace in Odense: membership, access, machines, safety, costs and how to get started."
 weight: 60
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Electronics"
+description: "Electronics bench at O'Town Makerspace in Odense: soldering stations, microcontrollers, motors and components for building and repairing electronics."
 section: "Work Areas"
 weight: 60
 gallery: "images/workspace/electronics"

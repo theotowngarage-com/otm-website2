@@ -1,5 +1,6 @@
 ---
 title: "Træværksted"
+description: "Træværksted hos O'Town Makerspace i Odense med stationære maskiner og håndværktøj til møbler, kunst og gør-det-selv-projekter."
 section: "Work Areas"
 weight: 70
 gallery: "images/workspace/woodworking"

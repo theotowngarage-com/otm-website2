@@ -186,14 +186,14 @@
                   {{ end }}
                 {{ end }}
               {{ end }}
-              {{ $flag := "fi-gb" }}{{ if eq .Lang "da" }}{{ $flag = "fi-dk" }}{{ end }}
+              {{ $flag := "gb" }}{{ if eq .Lang "da" }}{{ $flag = "dk" }}{{ end }}
               {{ if $isCurrent }}
                 <span class="cursor-default" title="{{ .LanguageName }}">
-                  <span class="fi {{ $flag }} text-xl leading-none"></span>
+                  <img src="{{ printf "/images/flags/%s.svg" $flag | relURL }}" alt="{{ .LanguageName }}" class="h-4 w-auto rounded-sm">
                 </span>
               {{ else }}
-                <a href="{{ $targetURL }}" onclick="localStorage.setItem('otm-lang','{{ .Lang }}')" class="opacity-50 hover:opacity-100 transition-opacity duration-200 rounded-sm" title="{{ .LanguageName }}">
-                  <span class="fi {{ $flag }} text-xl leading-none"></span>
+                <a href="{{ $targetURL }}" class="opacity-50 hover:opacity-100 transition-opacity duration-200 rounded-sm" title="{{ .LanguageName }}">
+                  <img src="{{ printf "/images/flags/%s.svg" $flag | relURL }}" alt="{{ .LanguageName }}" class="h-4 w-auto rounded-sm">
                 </a>
               {{ end }}
             {{ end }}
@@ -364,14 +364,14 @@
                   {{ end }}
                 {{ end }}
               {{ end }}
-              {{ $flag := "fi-gb" }}{{ if eq .Lang "da" }}{{ $flag = "fi-dk" }}{{ end }}
+              {{ $flag := "gb" }}{{ if eq .Lang "da" }}{{ $flag = "dk" }}{{ end }}
               {{ if $isCurrent }}
                 <span class="cursor-default" title="{{ .LanguageName }}">
-                  <span class="fi {{ $flag }} text-xl leading-none"></span>
+                  <img src="{{ printf "/images/flags/%s.svg" $flag | relURL }}" alt="{{ .LanguageName }}" class="h-4 w-auto rounded-sm">
                 </span>
               {{ else }}
-                <a href="{{ $targetURL }}" onclick="localStorage.setItem('otm-lang','{{ .Lang }}')" class="opacity-50 hover:opacity-100 transition-opacity duration-200 rounded-sm" title="{{ .LanguageName }}">
-                  <span class="fi {{ $flag }} text-xl leading-none"></span>
+                <a href="{{ $targetURL }}" class="opacity-50 hover:opacity-100 transition-opacity duration-200 rounded-sm" title="{{ .LanguageName }}">
+                  <img src="{{ printf "/images/flags/%s.svg" $flag | relURL }}" alt="{{ .LanguageName }}" class="h-4 w-auto rounded-sm">
                 </a>
               {{ end }}
             {{ end }}

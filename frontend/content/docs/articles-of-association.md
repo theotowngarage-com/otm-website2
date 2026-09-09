@@ -1,5 +1,6 @@
 ---
 title: "Articles of Association"
+description: "Articles of Association of O'Town Makerspace, the nonprofit community workshop association in Odense: purpose, membership, board and general assembly."
 weight: 10
 section: "Legal & Policy"
 section_weight: 4

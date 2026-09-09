@@ -1,5 +1,6 @@
 ---
 title: "Waste & Recycling"
+description: "How waste and recycling work at O'Town Makerspace in Odense: sorting stations, waste streams and what to do with leftover materials."
 section: "Work Areas"
 weight: 80
 gallery: "images/workspace/trash"

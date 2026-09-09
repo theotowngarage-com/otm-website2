@@ -33,16 +33,13 @@
       .site-logo > svg { height: 100%; width: auto; display: block; }
     </style>
 
-    {{ $description := "" }}
-    {{ if .IsHome }}
-      {{ $description = .Site.Params.description }}
-    {{ else if .Description }}
-      {{ $description = .Description }}
-    {{ else }}
-      {{ $description := .Site.Params.description }}
-    {{ end }}
-    <meta name="description" content="{{ $description }}" />
+    <meta name="description" content="{{ partial "func/page-description" . }}" />
     <link rel="canonical" href="{{ .Permalink }}" />
+    {{ range .AllTranslations }}
+      <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
+      {{ if eq .Language.Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />{{ end }}
+    {{ end }}
+    {{ partial "structured-data" . }}
 
     {{ partial "opengraph" . }}
 
@@ -50,29 +47,12 @@
       {{ printf `<link rel='%s' type='%s' href='%s' title='%s' />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+    <link rel="stylesheet" href="{{ "/css/vendor/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/vendor/fontawesome.min.css" | relURL }}" />
     
     <!-- Tailwind CSS (compiled locally) -->
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}" />
 
-    <!-- Language redirect: default to Danish unless user chose otherwise -->
-    <script>
-      (function() {
-        var chosen = localStorage.getItem('otm-lang');
-        if (chosen) return;
-        var onDanish = window.location.pathname.indexOf('/da/') === 0;
-        if (!onDanish) {
-          window.location.replace('/da' + window.location.pathname);
-        }
-      })();
-    </script>
 
     <!-- Set CSS color variables from Hugo config (for theme switching) -->
     <script>
@@ -98,7 +78,7 @@
 
     <!-- Klaro Cookie Consent -->
     <script src="/js/klaro-config.js"></script>
-    <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.css" />
+    <link rel="stylesheet" href="{{ "/css/vendor/klaro.css" | relURL }}" />
     <style>
       /* Klaro theme overrides — navy/orange palette */
       .klaro .cookie-modal .cm-modal,
@@ -182,7 +162,7 @@
         background-color: rgba(13, 26, 99, 0.85) !important;
       }
     </style>
-    <script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js"></script>
+    <script defer src="{{ "/js/vendor/klaro.js" | relURL }}"></script>
 
     {{/* Google Ads tag (gtag.js). Consent-gated: these scripts stay inert
          (type="text/plain") until the visitor accepts the Klaro "googleAds"
@@ -218,7 +198,7 @@
     {{/* htmx — used by the memberships partial (homepage + /checkout/) and
          any future htmx-driven fragments. Loaded site-wide so the hx-get
          attribute fires regardless of which page renders the partial. */}}
-    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <script src="{{ "/js/vendor/htmx.min.js" | relURL }}"></script>
 
   </head>
   <body>

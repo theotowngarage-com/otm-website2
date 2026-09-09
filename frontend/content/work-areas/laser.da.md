@@ -1,5 +1,6 @@
 ---
 title: "Laserskæring"
+description: "100 W CO₂-laserskærer med 120 × 80 cm arbejdsområde hos O'Town Makerspace i Odense: skær og gravér træ, akryl, læder, pap og meget mere."
 section: "Work Areas"
 weight: 30
 gallery: "images/workspace/lasercutter"

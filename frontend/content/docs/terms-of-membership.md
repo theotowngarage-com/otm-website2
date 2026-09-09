@@ -1,5 +1,6 @@
 ---
 title: "Terms of Membership"
+description: "Terms of Membership for O'Town Makerspace in Odense: access, fees, responsibilities and rules for using the facilities and workshops."
 weight: 20
 section: "Legal & Policy"
 section_weight: 4

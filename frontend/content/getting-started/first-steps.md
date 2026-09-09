@@ -1,5 +1,6 @@
 ---
 title: "First Steps"
+description: "How to join O'Town Makerspace in Odense: visit an open house, get your introduction, review the documents and sign up online."
 weight: 20
 ---
 If you're new to the makerspace and want to understand how to become part of the community, here is the simple path to get started:

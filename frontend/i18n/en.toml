@@ -551,3 +551,6 @@ other = "Access denied"
 
 [error_403_message]
 other = "You don't have permission to view this page. If you think this is a mistake, please sign in or contact us."
+
+[hero_image_alt]
+other = "Welding in the metal workshop at O'Town Makerspace"

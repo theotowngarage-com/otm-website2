@@ -1,5 +1,6 @@
 ---
 title: "Safety Guidelines"
+description: "Safety guidelines for using the tools and machines at O'Town Makerspace in Odense: protective equipment, machine rules and what to do in an emergency."
 weight: 30
 ---
 

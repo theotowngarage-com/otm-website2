@@ -1,5 +1,6 @@
 ---
 title: "3D Print"
+description: "3D-printlab hos O'Town Makerspace i Odense med flere printere til prototyper, produktdesign og kreative projekter, åbent 24/7 for medlemmer."
 section: "Work Areas"
 weight: 10
 gallery: "images/workspace/3dprinters"
