@@ -5,6 +5,7 @@ package http
 import (
 	"database/sql"
 	stdhttp "net/http"
+	"strings"
 
 	"github.com/iustin94/makerspace/api/internal/captcha"
 	"github.com/iustin94/makerspace/api/internal/email"
@@ -58,7 +59,7 @@ func Mux(
 		return membersHost + pattern
 	}
 
-	staticFallback := staticFallbackWith404(staticDir)
+	staticFallback := staticFallbackWith404(staticDir, membersHost)
 
 	// ───────────────────────── apex (any host with no more-specific match) ──
 	// Stripe webhook — Stripe POSTs to whatever URL is configured in the
@@ -150,7 +151,12 @@ func Mux(
 // proper HTTP 404 status — instead of the default plain-text
 // "404 page not found\n" that FileServer emits. Localization (Danish
 // /da/* paths) is handled inside errpage.Render.
-func staticFallbackWith404(staticDir string) stdhttp.Handler {
+//
+// The members host serves the same Hugo tree so login, checkout and the
+// dashboard skeletons resolve there, but nothing on that host is meant to
+// be indexed: every response carries X-Robots-Tag: noindex so search
+// engines stop listing members.<domain> as a duplicate of the apex.
+func staticFallbackWith404(staticDir string, membersHost string) stdhttp.Handler {
 	dir := stdhttp.Dir(staticDir)
 	fs := stdhttp.FileServer(dir)
 	return stdhttp.HandlerFunc(func(w stdhttp.ResponseWriter, r *stdhttp.Request) {
@@ -160,6 +166,36 @@ func staticFallbackWith404(staticDir string) stdhttp.Handler {
 			return
 		}
 		f.Close()
+		if isMembersHost(r.Host, membersHost) {
+			w.Header().Set("X-Robots-Tag", "noindex, nofollow")
+		}
+		w.Header().Set("Cache-Control", cacheControlFor(r.URL.Path))
 		fs.ServeHTTP(w, r)
 	})
+}
+
+func isMembersHost(requestHost string, membersHost string) bool {
+	if membersHost == "" {
+		return false
+	}
+	hostWithoutPort, _, _ := strings.Cut(requestHost, ":")
+	return strings.EqualFold(hostWithoutPort, membersHost)
+}
+
+// cacheControlFor picks a caching policy from the URL shape alone.
+//
+// Hugo image processing writes content-hashed names ("_hu_<hash>"), so
+// those can be cached for a year and marked immutable. Fonts change only
+// with a deliberate vendor bump, so a week is safe. Everything else — HTML,
+// the unhashed styles.css, klaro-config.js — is revalidated on every
+// request; FileServer answers If-Modified-Since with a 304, so the cost is
+// a round trip, not a transfer.
+func cacheControlFor(path string) string {
+	if strings.Contains(path, "_hu_") {
+		return "public, max-age=31536000, immutable"
+	}
+	if strings.HasPrefix(path, "/fonts/") {
+		return "public, max-age=604800"
+	}
+	return "public, no-cache"
 }
