@@ -1,5 +1,6 @@
 ---
 title: "Main Area"
+description: "The open shared workspace at the heart of O'Town Makerspace in Odense: workbenches, hand tools and room to build, collaborate and socialise."
 section: "Work Areas"
 weight: 1
 gallery: "images/workspace/main_area"

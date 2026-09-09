@@ -1,5 +1,6 @@
 ---
 title: "Affald & genbrug"
+description: "Sådan fungerer affald og genbrug hos O'Town Makerspace i Odense: sorteringsstationer, affaldsstrømme og hvad du gør med resterende materialer."
 section: "Work Areas"
 weight: 80
 gallery: "images/workspace/trash"

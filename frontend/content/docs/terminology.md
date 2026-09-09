@@ -1,5 +1,6 @@
 ---
 title: "Terminology"
+description: "Definitions of the terms used in the Articles of Association and other governing documents of O'Town Makerspace in Odense."
 weight: 5
 section: "Legal & Policy"
 section_weight: 4

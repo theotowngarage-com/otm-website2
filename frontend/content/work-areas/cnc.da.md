@@ -1,5 +1,6 @@
 ---
 title: "CNC-maskine"
+description: "Stepcraft 480 CNC-maskine hos O'Town Makerspace i Odense til præcisionsfræsning og gravering af skilte, dele og prototyper."
 section: "Work Areas"
 weight: 20
 gallery: "images/workspace/cnc"

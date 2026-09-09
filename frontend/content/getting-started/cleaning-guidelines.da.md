@@ -1,5 +1,6 @@
 ---
 title: "Rengøringsretningslinjer"
+description: "Rengøringsretningslinjer for O'Town Makerspace i Odense: efterlad hvert rum bedre, end du fandt det, så værktøj og maskiner er klar til den næste."
 weight: 40
 ---
 

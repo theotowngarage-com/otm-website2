@@ -1,5 +1,6 @@
 ---
 title: "Workshop Rules"
+description: "Workshop rules at O'Town Makerspace in Odense: common-sense expectations for sharing the space, the machines and the materials respectfully."
 weight: 35
 ---
 

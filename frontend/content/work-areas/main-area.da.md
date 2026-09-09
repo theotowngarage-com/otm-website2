@@ -1,5 +1,6 @@
 ---
 title: "Hovedområde"
+description: "Det åbne fællesværksted i hjertet af O'Town Makerspace i Odense: arbejdsborde, håndværktøj og plads til at bygge, samarbejde og hygge."
 section: "Work Areas"
 weight: 1
 gallery: "images/workspace/main_area"

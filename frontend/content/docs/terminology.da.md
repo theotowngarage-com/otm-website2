@@ -1,5 +1,6 @@
 ---
 title: "Definitioner"
+description: "Definitioner af de begreber, der bruges i vedtægterne og de øvrige styrende dokumenter for O'Town Makerspace i Odense."
 weight: 5
 section: "Legal & Policy"
 section_weight: 4

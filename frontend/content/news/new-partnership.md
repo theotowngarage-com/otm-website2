@@ -1,5 +1,6 @@
 ---
 title: "New Partner: Hetzner"
+description: "O'Town Makerspace in Odense welcomes Hetzner as a new partner and sponsor of the community workshop."
 date: 2026-01-25
 author: "The Board"
 category: "Announcements"

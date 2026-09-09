@@ -1,5 +1,6 @@
 ---
 title: "Cookie and Privacy Policy"
+description: "Cookie and privacy policy for otownmakerspace.dk: which cookies the site uses, what personal data O'Town Makerspace processes and your rights."
 weight: 30
 section: "Legal & Policy"
 section_weight: 4

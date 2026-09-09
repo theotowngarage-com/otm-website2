@@ -1,5 +1,6 @@
 ---
 title: "Woodworking"
+description: "Wood workshop at O'Town Makerspace in Odense with stationary machines and hand tools for furniture, art pieces and DIY projects."
 section: "Work Areas"
 weight: 70
 gallery: "images/workspace/woodworking"

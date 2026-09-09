@@ -1,5 +1,6 @@
 ---
 title: "Værkstedsregler"
+description: "Værkstedsregler hos O'Town Makerspace i Odense: sund fornuft for at dele rummet, maskinerne og materialerne med respekt."
 weight: 35
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Ansvarsfritagelse"
+description: "Ansvarsfritagelse for medlemmer af O'Town Makerspace i Odense om brug af faciliteter, værktøj og maskiner på eget ansvar."
 weight: 30
 section: "Legal & Policy"
 section_weight: 4

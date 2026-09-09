@@ -1,5 +1,6 @@
 ---
 title: "Medlemsbetingelser"
+description: "Medlemsbetingelser for O'Town Makerspace i Odense: adgang, kontingent, ansvar og regler for brug af faciliteter og værksteder."
 weight: 20
 section: "Legal & Policy"
 section_weight: 4

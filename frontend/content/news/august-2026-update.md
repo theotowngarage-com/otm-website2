@@ -1,5 +1,6 @@
 ---
 title: "August Update: MakerMeet & Repurpose Marketplace"
+description: "August 2026 update from O'Town Makerspace in Odense: the MakerMeet grill edition on 15 August and the new Repurpose Marketplace for members."
 date: 2026-08-03
 author: "Oscar"
 category: "Announcements"

@@ -1,5 +1,6 @@
 ---
 title: "Michał Miłkowski"
+description: "Michał Miłkowski, Maintenance at O'Town Makerspace, the community workshop in Odense."
 role: "Maintenance"
 profile_picture: "images/team/michal.png"
 section: "Team"

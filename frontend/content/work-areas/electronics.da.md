@@ -1,5 +1,6 @@
 ---
 title: "Elektronik"
+description: "Elektronikbord hos O'Town Makerspace i Odense: loddestationer, mikrocontrollere, motorer og komponenter til at bygge og reparere elektronik."
 section: "Work Areas"
 weight: 60
 gallery: "images/workspace/electronics"

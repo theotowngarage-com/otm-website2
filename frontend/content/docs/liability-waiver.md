@@ -1,5 +1,6 @@
 ---
 title: "Liability Waiver"
+description: "Liability waiver for members of O'Town Makerspace in Odense covering the use of facilities, tools and machines at your own risk."
 weight: 30
 section: "Legal & Policy"
 section_weight: 4

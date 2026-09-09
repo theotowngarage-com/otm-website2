@@ -1,5 +1,6 @@
 ---
 title: "Metalworking" 
+description: "Metalworking workshop at O'Town Makerspace in Odense with tools for cutting, drilling, welding and finishing metal, for beginners and experienced makers."
 section: "Work Areas"
 weight: 40
 gallery: "images/workspace/metalworking"
